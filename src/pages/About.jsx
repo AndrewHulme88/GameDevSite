@@ -2,10 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import TeamMemberCard from '../components/TeamMemberCard';
-import designerImg from '../assets/designer.jpg';
-import programmerImg from '../assets/programmer.jpg';
-import artistImg from '../assets/artist.jpg';
-import audioImg from '../assets/audio.jpg';
+import designerImg from '../assets/Zelda.jpg';
+import programmerImg from '../assets/Zelda.jpg';
+import artistImg from '../assets/Zelda.jpg';
+import audioImg from '../assets/Zelda.jpg';
 import Footer from '../components/Footer';
 
 const teamMembers = [
