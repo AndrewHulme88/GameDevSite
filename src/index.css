@@ -54,3 +54,35 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* ... previous styles ... */
+
+.carousel-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: black;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.team-card {
+  border: 3px solid black;
+  padding: 15px;
+  background: #80cbc4; /* Teal background for team cards */
+  text-align: center;
+}
+
+/* Responsive adjustments for team cards */
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
