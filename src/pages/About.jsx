@@ -1,34 +1,28 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import { motion } from 'framer-motion';
+import TeamMemberCard from '../components/TeamMemberCard';
+import designerImg from '../assets/Zelda.jpg';
+import programmerImg from '../assets/Zelda.jpg';
+import artistImg from '../assets/Zelda.jpg';
+import audioImg from '../assets/Zelda.jpg';
 
 const teamMembers = [
-  { name: "Alex Designer", role: "Game Designer", bio: "Crafts game mechanics that captivate." },
-  { name: "Bob Programmer", role: "Programmer", bio: "Brings visions to life with code." },
-  { name: "Cara Artist", role: "Artist", bio: "Paints worlds that come alive." },
-  { name: "Dan Audio", role: "Audio Engineer", bio: "Sounds that immerse you in the game." },
+  { id: 1, name: "Jane Doe", bio: "Lead Game Designer with 10 years of experience", image: designerImg },
+  { id: 2, name: "John Smith", bio: "Senior Programmer specializing in game engines", image: programmerImg },
+  { id: 3, name: "Alice Brown", bio: "Creative Artist known for vibrant game art", image: artistImg },
+  { id: 4, name: "Bob Johnson", bio: "Expert Audio Engineer crafting immersive soundscapes", image: audioImg },
 ];
-
-const TeamCard = ({ member }) => (
-  <motion.div
-    className="team-card"
-    whileHover={{ scale: 1.05 }}
-  >
-    <h3>{member.name}</h3>
-    <p><strong>{member.role}</strong></p>
-    <p>{member.bio}</p>
-  </motion.div>
-);
 
 const About = () => {
   return (
     <>
       <Navbar />
       <h1>About Us</h1>
-      <p>We are a passionate team dedicated to creating unforgettable gaming experiences.</p>
+      <p>Here's where we tell our story...</p>
+      <h2>Our Team</h2>
       <div className="team-grid">
-        {teamMembers.map((member, index) => (
-          <TeamCard key={index} member={member} />
+        {teamMembers.map(member => (
+          <TeamMemberCard key={member.id} member={member} />
         ))}
       </div>
     </>

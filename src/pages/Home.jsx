@@ -1,8 +1,8 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import GameCard from '../components/GameCard';
 import MarioImg from '../assets/Mario.jpg';
 import ZeldaImg from '../assets/Zelda.jpg';
@@ -27,16 +27,15 @@ const Home = () => {
     <>
       <Navbar />
       <h1>Welcome to GameDevSite!</h1>
-      <p>Explore our world of games.</p>
-      <div className="carousel-container">
-        <Slider {...settings}>
-          {games.map((game) => (
-            <div key={game.id}>
-              <GameCard game={game} />
-            </div>
-          ))}
-        </Slider>
-      </div>
+      <p>Your home for innovative and exciting video games.</p>
+      <h2>Featured Games</h2>
+      <Slider {...settings}>
+        {games.map(game => (
+          <div key={game.id}>
+            <GameCard game={game} />
+          </div>
+        ))}
+      </Slider>
     </>
   );
 };
