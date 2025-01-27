@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -6,6 +7,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import GameCard from '../components/GameCard';
 import MarioImg from '../assets/Mario.jpg';
 import ZeldaImg from '../assets/Zelda.jpg';
+import Footer from '../components/Footer';
 
 const games = [
   { id: 1, title: "Game One", description: "A thrilling adventure", image: MarioImg },
@@ -24,11 +26,34 @@ const settings = {
 
 const Home = () => {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <Navbar />
-      <h1>Welcome to GameDevSite!</h1>
-      <p>Your home for innovative and exciting video games.</p>
-      <h2>Featured Games</h2>
+      <motion.h1
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
+      >
+        Welcome to GameDevSite!
+      </motion.h1>
+      <motion.p
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.4, duration: 0.5 }}
+      >
+        Your home for innovative and exciting video games.
+      </motion.p>
+      <motion.h2
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.6, duration: 0.5 }}
+      >
+        Featured Games
+      </motion.h2>
       <Slider {...settings}>
         {games.map(game => (
           <div key={game.id}>
@@ -36,7 +61,8 @@ const Home = () => {
           </div>
         ))}
       </Slider>
-    </>
+      <Footer />
+    </motion.div>
   );
 };
 
