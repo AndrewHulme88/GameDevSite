@@ -1,15 +1,20 @@
-function GameCard({ title, image, description, link }) {
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+
+
+const GameCard = ({ game }) => {
   return (
-    <div className="game-card">
-      <Link to={link}>
-        <div className="card-content">
-          <img src={image} alt={title} className="game-image" />
-          <h3 className="game-title">{title}</h3>
-          <p className="game-description">{description}</p>
-        </div>
+    <motion.div
+      className="game-card"
+      whileHover={{ scale: 1.05 }}
+    >
+      <Link to={`/game/ ${game.id}`}>
+        <img src={game.image} alt={game.title} />
+        <h3>{game.title}</h3>
+        <p>{game.description}</p>
       </Link>
-    </div>
+    </motion.div>
   );
-}
+};
 
 export default GameCard;

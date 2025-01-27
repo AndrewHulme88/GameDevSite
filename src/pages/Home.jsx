@@ -1,10 +1,13 @@
-function Home() {
+import Navbar from '../components/Navbar';
+
+const Home = () => {
   return (
-    <div className="home">
-      <h1>Welcome to GameDevSite</h1>
-      <p>Discover our amazing video games!</p>
-    </div>
+    <>
+      <Navbar />
+      <h1>Welcome to GameDevSite!</h1>
+      <p>Your home for innovative and exciting video games.</p>
+    </>
   );
-}
+};
 
 export default Home;

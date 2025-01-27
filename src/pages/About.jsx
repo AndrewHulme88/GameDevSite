@@ -1,10 +1,13 @@
-function About() {
+import Navbar from '../components/Navbar';
+
+const About = () => {
   return (
-    <div className="about">
+    <>
+      <Navbar />
       <h1>About Us</h1>
-      <p>We are a passionate video game development company creating unique and engaging games.</p>
-    </div>
+      <p>Here's where we tell our story...</p>
+    </>
   );
-}
+};
 
 export default About;

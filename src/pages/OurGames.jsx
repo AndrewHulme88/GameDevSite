@@ -1,22 +1,27 @@
+import Navbar from '../components/Navbar';
 import GameCard from '../components/GameCard';
+import MarioImg from '../assets/Mario.jpg';
+import ZeldaImg from '../assets/Zelda.jpg';
+
 
 const games = [
-  { title: 'Game 1', image: 'game1.jpg', description: 'Description of Game 1', link: '/game1' },
-  { title: 'Game 2', image: 'game2.jpg', description: 'Description of Game 2', link: '/game2' },
-  { title: 'Game 3 (In Dev)', image: 'game3.jpg', description: 'Description of Game 3', link: '/game3' },
+  { id: 1, title: "Game One", description: "A thrilling adventure", image: MarioImg },
+  { id: 2, title: "Game Two", description: "A puzzle game", image: ZeldaImg },
 ];
 
-function OurGames() {
+
+const OurGames = () => {
   return (
-    <div className="our-games">
+    <>
+      <Navbar />
       <h1>Our Games</h1>
       <div className="games-grid">
-        {games.map((game, index) => (
-          <GameCard key={index} {...game} />
+        {games.map(game => (
+          <GameCard key={game.id} game={game} />
         ))}
       </div>
-    </div>
+    </>
   );
-}
+};
 
 export default OurGames;
