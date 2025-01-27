@@ -1,0 +1,117 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f0f0f0;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #ffcc00;
+  border-bottom: 4px solid #000;
+  padding: 1rem;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav-item {
+  margin: 0 1rem;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* General styles */
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1 {
+  color: #ff4500;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #000;
+  padding-bottom: 0.5rem;
+}
+
+/* Home and About page styles */
+.home, .about {
+  text-align: center;
+  padding: 2rem;
+}
+
+/* OurGames page styles */
+.our-games {
+  padding: 2rem;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* GameCard styles */
+.game-card {
+  background-color: #fff;
+  border: 4px solid #000;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.game-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #000;
+}
+
+.game-title {
+  color: #ff4500;
+  margin: 1rem 0 0.5rem;
+}
+
+.game-description {
+  color: #333;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+
+  .games-grid {
+    grid-template-columns: 1fr;
+  }
+}
